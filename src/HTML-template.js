@@ -1,3 +1,19 @@
+// Card Function
+
+{/* <div class="card" style="width: 18rem;">
+<div class="card-body">
+  <h2 class="card-title">Joseph Polizzotto</h2>
+  <p class="card-text">Manager</p>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">id</li>
+  <li class="list-group-item">email</li>
+  <li class="list-group-item">office number</li>
+</ul>
+</div> */}
+
+
+
 module.exports = templateData => {
     // destructure page data by section
     const { manager } = templateData;
@@ -26,17 +42,13 @@ module.exports = templateData => {
           <h1 class="page-title text-secondary bg-dark py-2 px-3">My Team</h1>
         </div>
       </header>
-      <main id="container" class="container-sm container-md container-lg container-xl container-xxl">
+      <main id="container" class="container">
       <div class="row">
-      <div class="col-12 team-members">
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">${manager.name}</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
+      <div class="team-members col">
+
+      ${manager.name}
+
+      
       </div>
       </div>
       </main>
