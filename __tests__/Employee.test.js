@@ -1,5 +1,13 @@
 const Employee = require('../lib/Employee');
 
+function onlyLettersAndSpaces(str) {
+  return /^[A-Za-z\s]*$/.test(str);
+}
+
+function onlyNumbers(str) {
+  return /^\d+$/.test(str);
+}
+
 const ValidateEmail = function(email) {
 var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 if(email.match(mailformat)) {
@@ -12,7 +20,9 @@ test('creates a Employee object', () => {
     const employee = new Employee('Janis', 57942, 'janis@stanlycc.edu');
   
     expect(employee.name).toBe('Janis');
+    expect(onlyLettersAndSpaces(employee.name)).toBe(true);
     expect(employee.id).toEqual(expect.any(Number));
+    expect(onlyNumbers(employee.id)).toBe(true);
     expect(ValidateEmail(employee.email)).toBe(true);
   });
 

@@ -8,12 +8,17 @@ const ValidateEmail = function(email) {
     return false; }
     }
 
+    // allow hypens and underscores as well
+    function alphaNumericNoSpaces(str) {
+      return /^[a-zA-Z0-9-_]+$/.test(str);
+    }
+
 test('creates a manager object', () => {
-    const manager = new Manager('Janis', 57942, 'janis@stanlycc.edu', 4);
+    const manager = new Manager('Janis', 57942, 'janis@stanlycc.edu', '4D');
     expect(manager.name).toBe('Janis');
     expect(manager.id).toEqual(expect.any(Number));
     expect(ValidateEmail(manager.email)).toBe(true);
-    expect(manager.office).toEqual(expect.any(Number));
+    expect(alphaNumericNoSpaces(manager.office)).toBe(true);
   });
 
   test("gets Manager's Role", () => {

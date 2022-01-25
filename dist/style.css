@@ -28,14 +28,54 @@ h1 {
 
 .card {
     margin: 10px 10px;
-    padding: 0px 5px;
+    padding: 5px 40px 5px 5px;
     border-radius: 4px;
+    flex: 1;
+    min-width: 40%;
 }
 
 @media screen and (max-width: 768px) {
     .card {
       flex: 0 100%;
-      /* text-align: center; */
     }
+  }.team-members {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+h1 {
+    text-align: center;
+}
+
+.fas {
+    color: white;
+}
+
+.fa {
+    color: white;
+}
+
+.card-title {
+    color: white
+}
+
+.card-text {
+    color: white
+}
+
+.card {
+    margin: 10px 10px;
+    padding: 5px 40px 5px 5px;
+    border-radius: 4px;
+    flex: 1;
+    min-width: 40%;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+      flex: 0 100%;
+    }
   }

@@ -8,13 +8,19 @@ const ValidateEmail = function(email) {
     return false; }
     }
 
+  // allow hypens but no underscores or spaces
+  function alphaNumericNoUnderscore(str) {
+    return /^[a-zA-Z0-9-]+$/.test(str);
+  }
+
 test('creates a engineer object', () => {
     const engineer = new Engineer('Juan', 63549, 'juan@apple.com', 'jolivares15');
   
     expect(engineer.name).toBe('Juan');
     expect(engineer.id).toEqual(expect.any(Number));
     expect(ValidateEmail(engineer.email)).toBe(true);
-    expect(engineer.github).toBe('jolivares15');
+    // expect(engineer.github).toBe('jolivares15');
+    expect(alphaNumericNoUnderscore(engineer.github)).toBe(true);
   });
 
   test("gets Engineer's Role", () => {
