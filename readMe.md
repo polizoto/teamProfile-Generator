@@ -10,11 +10,16 @@ The app provides the following functionality:
 - generate an HTML page based on your answers
 - you don't have to know any HTML to create the page
 
-The webpage will currently consist of only a managers, engineers, and interns:
+The webpage will currently consist of a manager, engineers, and interns:
 
 - Manager (Name, ID, email, office number)
 - Engineers (Name, ID, email, github)
 - Interns (Name, ID, email, school)
+
+## Node Dependencies
+
+- inquirer
+- jest (for testing)
 
 ## Installation
 
