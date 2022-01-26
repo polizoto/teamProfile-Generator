@@ -43,3 +43,4 @@ The webpage will currently consist of a manager, engineers, and interns:
 
 ## Video Demo
 
+<a href="https://www.dropbox.com/s/v99x1tyhbx6rwyu/Teamprofilegenerator-CC.mp4?dl=0" target="_blank">Video Demonstration of Installation and Usage</a>
